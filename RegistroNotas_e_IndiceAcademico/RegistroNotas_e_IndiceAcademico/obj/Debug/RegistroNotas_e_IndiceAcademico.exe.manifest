@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegistroNotas_e_IndiceAcademico.exe" size="5425056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegistroNotas_e_IndiceAcademico.exe" size="5426080">
       <assemblyIdentity name="RegistroNotas_e_IndiceAcademico" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zCjSpHXtkiFrvBc5MjjnB2EAy8Jx5MrREjYAilhbcDc=</dsig:DigestValue>
+        <dsig:DigestValue>t9BJh4GTemFCwFbQgW4aghYiUJTk2z8ze/AL7XA5cT8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

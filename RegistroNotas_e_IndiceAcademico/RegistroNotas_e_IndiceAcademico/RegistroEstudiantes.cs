@@ -342,6 +342,7 @@ namespace RegistroNotas_e_IndiceAcademico
 
                     Agregar_Registro(Tbx_Matricula.Text, Tbx_Nombre.Text, Tbx_Apellido.Text, Tbx_Direccion.Text, Tbx_Telefono.Text, Tbx_Edad.Text, sexo, Tbx_Carrera.Text);
 
+                    Agregar_Registro_en_Notas(Tbx_Matricula.Text);
 
                     MessageBox.Show("Alumno Agregado!");
 
@@ -352,6 +353,71 @@ namespace RegistroNotas_e_IndiceAcademico
             }
         }
 
+        private void Agregar_Registro_en_Notas(string Matricula)
+        {
+            //Convertir string a entero
+            //int mat = Convert.ToInt32(matricula);
+
+            // conexión *************************
+            OleDbConnection Conexion = new OleDbConnection();   // Crea la conexión
+            Conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " + Application.StartupPath + @"\Notas_e_Indice_BBDD\Notas_e_Indice_BBDD.accdb;" + "Persist Security Info = false";
+            //Configurar la conexión, indicandole el proveedor de MIcrosoft que nos permite usar ACCESS
+            //El origen del archivo de la base de datos ACCESS. Nota: los '\' se deben de escribir dobles '\\'
+            //Y el dato de seguridad
+
+
+            // cadena SQL  *************************
+            //Esta es una cadena SQL que nos permitira hacer la busqueda
+            String CadenaSQL = "SELECT Creditos, Cuatrimestre, Codigo_Asignatura, Asignatura FROM Notas WHERE id <= 35"; //selecciona todos los campor de la tabla personal donde el id sea igual al codigo
+            // adaptador  *************************
+            OleDbDataAdapter Adaptador = new OleDbDataAdapter(CadenaSQL, Conexion); // Es una caja que se llena con cualquer dato: en este caso le pasamos como parametro
+                                                                                    // la cadena SQL y la Coneccion
+            
+            // dataset  *************************
+            // sirve par almacenar la tabla, es el objeto  con el cual podemos manipular los datos
+            DataSet ds = new DataSet();
+
+            // llenar el dataser  *************************
+            Conexion.Open(); // abre la base de datos, lo que significa que se hace el enlace entre el programa y la base de datos
+            Adaptador.Fill(ds); //llenamos el data set con el contenido del adaptador
+            Conexion.Close(); // cerramos la coneccion
+
+
+            // contar registros  *************************
+            // cuenta cuantos registros se almacenaron en el dataset
+            if (ds.Tables[0].Rows.Count == 0)  // revisa las filas de la tabla 0 para ver su tamaño. Si es igual a cero entonces devuelve false, de lo contrario true.
+            {  // Cuantas filas o registros tiene la tabla cero del dataset?
+                ds.Dispose(); //para cerrar aunque el garbage collector lo hace automatico
+            }
+            else
+            {
+                //Agrega todo a la tabla Notas
+                for (int i = 0; i < 35; i++)
+                { 
+                    //Instrucción SQL
+                    string CadenaSQL2 = "INSERT INTO Notas (Matricula, Creditos, Cuatrimestre, Codigo_Asignatura, Asignatura) ";
+                    CadenaSQL2 = CadenaSQL2 + "VALUES ('" + Matricula + "',";
+                    CadenaSQL2 = CadenaSQL2 + "       " + Convert.ToDouble(ds.Tables[0].Rows[i]["Creditos"].ToString()) + ",";
+                    CadenaSQL2 = CadenaSQL2 + "       '" + ds.Tables[0].Rows[i]["Cuatrimestre"].ToString() + "',";
+                    CadenaSQL2 = CadenaSQL2 + "       '" + ds.Tables[0].Rows[i]["Codigo_Asignatura"].ToString() + "',";
+                    CadenaSQL2 = CadenaSQL2 + "       '" + ds.Tables[0].Rows[i]["Asignatura"].ToString() + "')";
+
+                    //Crear comando
+                    OleDbCommand Comando = Conexion.CreateCommand();  //Asignamos la cadena SQL al comando
+                    Comando.CommandText = CadenaSQL2;
+
+                    //Ejecutar la consulta de acción
+                    Conexion.Open(); //Abrimos la conexion
+                    Comando.ExecuteNonQuery(); //Ejecutamos la consulta
+                    Conexion.Close(); //Cerramos la conexion
+                }
+            }
+
+            // cerrar o liberar la memoria del dataset
+            ds.Dispose();
+        }
+
+
         private bool Agregar_Registro(string Matricula, string Nombre, string Apellido, string Direccion, string Telefono, string Edad, string Sexo, string Carrera)
         {
             //transformar de cadena a texto
@@ -359,7 +425,7 @@ namespace RegistroNotas_e_IndiceAcademico
 
             //Conección
             OleDbConnection Conexion = new OleDbConnection();
-            Conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " + Application.StartupPath + @"Notas_e_Indice_BBDD\Notas_e_Indice_BBDD.accdb;" + "Persist Security Info = false";
+            Conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " + Application.StartupPath + @"\Notas_e_Indice_BBDD\Notas_e_Indice_BBDD.accdb;" + "Persist Security Info = false";
 
             //Instrucción SQL
             string CadenaSQL = "INSERT INTO Alumnos (Matricula, Nombre, Apellido, Direccion, Telefono, Sexo, Edad, Carrera) ";

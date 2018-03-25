@@ -427,7 +427,6 @@
             this.Btn_Random.TabStop = false;
             this.Btn_Random.Text = "Random";
             this.Btn_Random.UseVisualStyleBackColor = false;
-            this.Btn_Random.Visible = false;
             this.Btn_Random.Click += new System.EventHandler(this.Btn_Random_Click);
             // 
             // tableLayoutPanel7
