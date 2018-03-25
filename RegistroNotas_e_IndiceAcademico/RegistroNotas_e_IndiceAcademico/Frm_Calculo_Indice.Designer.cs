@@ -118,7 +118,6 @@
             this.Lab_IndiceTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer_Load_Indice = new System.Windows.Forms.Timer(this.components);
@@ -280,9 +279,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Lyo_Cargar_Indice_Total, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel17, 1, 2);
-
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel18, 2, 2);
-
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1689,7 +1686,6 @@
             this.label2.Text = "B_4";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-
             // tableLayoutPanel18
             // 
             this.tableLayoutPanel18.BackColor = System.Drawing.Color.Gray;
@@ -1704,7 +1700,6 @@
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel18.Size = new System.Drawing.Size(218, 115);
             this.tableLayoutPanel18.TabIndex = 16;
-
             // 
             // timer1
             // 
