@@ -118,7 +118,7 @@
             this.Lab_IndiceTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel_Prueba = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_Casa = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer_Load_Indice = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2.SuspendLayout();
@@ -279,7 +279,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Lyo_Cargar_Indice_Total, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel17, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel_Prueba, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel_Casa, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1686,20 +1686,20 @@
             this.label2.Text = "B_4";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tableLayoutPanel_Prueba
+            // tableLayoutPanel_Casa
             // 
-            this.tableLayoutPanel_Prueba.BackColor = System.Drawing.Color.Gray;
-            this.tableLayoutPanel_Prueba.ColumnCount = 1;
-            this.tableLayoutPanel_Prueba.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_Prueba.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tableLayoutPanel_Prueba.Location = new System.Drawing.Point(975, 582);
-            this.tableLayoutPanel_Prueba.Name = "tableLayoutPanel_Prueba";
-            this.tableLayoutPanel_Prueba.RowCount = 1;
-            this.tableLayoutPanel_Prueba.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_Prueba.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel_Prueba.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel_Prueba.Size = new System.Drawing.Size(218, 115);
-            this.tableLayoutPanel_Prueba.TabIndex = 16;
+            this.tableLayoutPanel_Casa.BackColor = System.Drawing.Color.Gray;
+            this.tableLayoutPanel_Casa.ColumnCount = 1;
+            this.tableLayoutPanel_Casa.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_Casa.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel_Casa.Location = new System.Drawing.Point(975, 582);
+            this.tableLayoutPanel_Casa.Name = "tableLayoutPanel_Casa";
+            this.tableLayoutPanel_Casa.RowCount = 1;
+            this.tableLayoutPanel_Casa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_Casa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel_Casa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel_Casa.Size = new System.Drawing.Size(218, 115);
+            this.tableLayoutPanel_Casa.TabIndex = 16;
             // 
             // timer1
             // 
@@ -1844,6 +1844,6 @@
         private System.Windows.Forms.Label Lab_IndiceTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Prueba;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Casa;
     }
 }
