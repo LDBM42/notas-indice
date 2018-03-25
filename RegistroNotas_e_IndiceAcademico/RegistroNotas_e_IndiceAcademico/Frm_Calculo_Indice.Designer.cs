@@ -118,7 +118,11 @@
             this.Lab_IndiceTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.tableLayoutPanel_Casa = new System.Windows.Forms.TableLayoutPanel();
+=======
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+>>>>>>> parent of fc5b5f0... Probando Github Branch
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer_Load_Indice = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2.SuspendLayout();
@@ -279,7 +283,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Lyo_Cargar_Indice_Total, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel17, 1, 2);
+<<<<<<< HEAD
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel_Casa, 2, 2);
+=======
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel18, 2, 2);
+>>>>>>> parent of fc5b5f0... Probando Github Branch
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1686,6 +1694,7 @@
             this.label2.Text = "B_4";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+<<<<<<< HEAD
             // tableLayoutPanel_Casa
             // 
             this.tableLayoutPanel_Casa.BackColor = System.Drawing.Color.Gray;
@@ -1700,6 +1709,22 @@
             this.tableLayoutPanel_Casa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel_Casa.Size = new System.Drawing.Size(218, 115);
             this.tableLayoutPanel_Casa.TabIndex = 16;
+=======
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.BackColor = System.Drawing.Color.Gray;
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(975, 582);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(218, 115);
+            this.tableLayoutPanel18.TabIndex = 16;
+>>>>>>> parent of fc5b5f0... Probando Github Branch
             // 
             // timer1
             // 
@@ -1844,6 +1869,10 @@
         private System.Windows.Forms.Label Lab_IndiceTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+<<<<<<< HEAD
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Casa;
+=======
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+>>>>>>> parent of fc5b5f0... Probando Github Branch
     }
 }
